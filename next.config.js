@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const path = require("path");
 
 const nextConfig = {
@@ -6,15 +5,13 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "css")],
   },
-  trailingSlash: true, // Retain trailing slashes for static exports if needed.
+  trailingSlash: true, // Retain trailing slashes if needed.
   devIndicators: {
-    buildActivity: false, // Disable build activity indicator during development.
+    buildActivity: false,
   },
   eslint: {
-    ignoreDuringBuilds: false, // Fail the build if ESLint errors occur.
+    ignoreDuringBuilds: false,
   },
-  // Uncomment the following line ONLY if static export is required:
-  // output: 'export',
 };
 
 module.exports = nextConfig;
