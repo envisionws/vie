@@ -2,18 +2,19 @@
 const path = require("path");
 
 const nextConfig = {
-  output: 'export',
-  reactStrictMode: false,
+  reactStrictMode: true, // Enforce best practices.
   sassOptions: {
     includePaths: [path.join(__dirname, "css")],
   },
-  trailingSlash: true,
+  trailingSlash: true, // Retain trailing slashes for static exports if needed.
   devIndicators: {
-    buildActivity: false,
+    buildActivity: false, // Disable build activity indicator during development.
   },
   eslint: {
-    ignoreDuringBuilds: false,
-  }
-}
+    ignoreDuringBuilds: false, // Fail the build if ESLint errors occur.
+  },
+  // Uncomment the following line ONLY if static export is required:
+  // output: 'export',
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
