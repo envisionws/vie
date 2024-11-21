@@ -5,12 +5,12 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "css")],
   },
-  trailingSlash: true, // Retain trailing slashes if needed.
+  trailingSlash: true, // Optional, keep if needed.
   devIndicators: {
-    buildActivity: false,
+    buildActivity: false, // Optional, for development builds.
   },
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: false, // Fail build on ESLint errors.
   },
 };
 
