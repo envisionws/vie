@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next lint",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npm install swiper react-scroll typewriter-effect"
   },
   "dependencies": {
     "eslint": "8.48.0",
@@ -23,5 +24,10 @@
   },
   "devDependencies": {
     "sass": "^1.66.1"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
 }
